@@ -1,0 +1,85 @@
+# YonocyTech Website - GitHub Actions Deployment Workflow
+# 
+# This workflow:
+# 1. Checks out the code
+# 2. Sets up Node.js
+# 3. Installs dependencies
+# 4. Runs linting
+# 5. Builds the Next.js project
+# 6. Deploys to GitHub Pages (or your preferred hosting)
+
+name: Deploy YonocyTech Website
+
+on:
+  # Trigger on push to main branch
+  push:
+    branches: ["main"]
+  
+  # Allow manual trigger from GitHub Actions tab
+  workflow_dispatch:
+
+# Set permissions for GitHub Pages deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  # ──────────────────────────────────────────────────
+  # LINT & BUILD JOB
+  # ──────────────────────────────────────────────────
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./yonocytech-website
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: ./yonocytech-website/package-lock.json
+
+      - name: 📦 Install dependencies
+        run: npm ci
+
+      - name: 🔍 Run linter
+        run: npm run lint
+
+      - name: 🏗️ Build project
+        run: npm run build
+        env:
+          # Add any environment variables here if needed
+          # NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL }}
+          CI: true
+
+      - name: 📤 Upload build artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./yonocytech-website/out
+
+  # ──────────────────────────────────────────────────
+  # DEPLOY JOB (only runs after build succeeds)
+  # ──────────────────────────────────────────────────
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: 🚀 Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,111 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "contact": "Contact Us"
+  },
+  "home": {
+    "heroTitle": "Innovate with YonocyTech — Your Trusted Technology Partner",
+    "heroSubtitle": "We deliver cutting-edge web, mobile, and AI solutions to drive your business forward.",
+    "ctaButton": "Get Started",
+    "trustYears": "5+ years experience",
+    "trustProjects": "50+ projects",
+    "trustClients": "30+ happy clients",
+    "servicesTitle": "Our Services",
+    "servicesSubtitle": "Comprehensive technology solutions tailored to your needs",
+    "testimonialTitle": "What Our Clients Say",
+    "contactCta": "Call us: 0784258414",
+    "whatsappLink": "Chat on WhatsApp"
+  },
+  "about": {
+    "title": "About Us",
+    "companyStory": "Founded by Habib Rahman Yonocy, YonocyTech is a technology company dedicated to innovation and excellence. We combine technical expertise with creative thinking to deliver solutions that transform businesses.",
+    "mission": "Empowering businesses through smart technology solutions.",
+    "vision": "To be a leading technology innovator in the region.",
+    "founderName": "Habib Rahman Yonocy",
+    "founderRole": "Founder & CEO",
+    "founderBio": "With over 5 years of experience in software development and technology consulting, Habib Rahman Yonocy founded YonocyTech with a vision to bridge the gap between cutting-edge technology and real-world business needs.",
+    "whyUsTitle": "Why Choose Us",
+    "whyUsExpertise": "Expertise",
+    "whyUsExpertiseDesc": "Deep technical knowledge across multiple domains",
+    "whyUsQuality": "Quality",
+    "whyUsQualityDesc": "Commitment to delivering excellence in every project",
+    "whyUsSupport": "Support",
+    "whyUsSupportDesc": "24/7 dedicated customer support",
+    "whyUsInnovation": "Innovation",
+    "whyUsInnovationDesc": "Cutting-edge solutions using latest technologies"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive technology solutions to accelerate your business growth",
+    "webDev": "Web Development",
+    "webDevDesc": "Modern, responsive websites and web applications built with the latest frameworks and technologies.",
+    "mobileDev": "Mobile App Development",
+    "mobileDevDesc": "Native and cross-platform mobile applications for iOS and Android.",
+    "aiSolutions": "AI & Machine Learning Solutions",
+    "aiSolutionsDesc": "Intelligent solutions leveraging AI and ML to automate and optimize your business processes.",
+    "itConsulting": "IT Consulting",
+    "itConsultingDesc": "Strategic technology consulting to help you make informed decisions and achieve your goals.",
+    "digitalMarketing": "Digital Marketing",
+    "digitalMarketingDesc": "Data-driven digital marketing strategies to grow your online presence and reach.",
+    "customSoftware": "Custom Software Development",
+    "customSoftwareDesc": "Tailored software solutions designed specifically for your unique business requirements.",
+    "basic": "Basic",
+    "standard": "Standard",
+    "premium": "Premium",
+    "contactUs": "Contact us at 0784258414",
+    "features": "Key Features",
+    "techStack": "Technology Stack"
+  },
+  "portfolio": {
+    "title": "Our Portfolio",
+    "subtitle": "Showcasing our best work across web, mobile, and AI projects",
+    "all": "All",
+    "web": "Web",
+    "mobile": "Mobile",
+    "ai": "AI",
+    "viewProject": "View Project",
+    "caseStudy": "Case Study",
+    "problem": "Problem",
+    "solution": "Solution",
+    "results": "Results"
+  },
+  "blog": {
+    "title": "Blog & Articles",
+    "subtitle": "Insights, tutorials, and updates from the YonocyTech team",
+    "readMore": "Read More",
+    "categories": "Categories",
+    "techTutorials": "Tech Tutorials",
+    "industryNews": "Industry News",
+    "companyUpdates": "Company Updates"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with us. We'd love to hear from you.",
+    "phone": "0784258414",
+    "email": "info@yonocytech.com",
+    "address": "Kabul, Afghanistan",
+    "formName": "Your Name",
+    "formEmail": "Your Email",
+    "formPhone": "Your Phone",
+    "formSubject": "Subject",
+    "formMessage": "Your Message",
+    "formSubmit": "Send Message",
+    "formSuccess": "Thank you! Your message has been sent.",
+    "whatsapp": "Chat on WhatsApp",
+    "callNow": "Call Now"
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Info",
+    "socialMedia": "Social Media",
+    "copyright": "© 2026 YonocyTech. All rights reserved.",
+    "description": "Your trusted technology partner for web, mobile, and AI solutions."
+  },
+  "common": {
+    "languageSwitch": "فارسی"
+  }
+}
