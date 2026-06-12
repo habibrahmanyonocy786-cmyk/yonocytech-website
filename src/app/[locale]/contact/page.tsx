@@ -21,11 +21,31 @@ export default function ContactPage() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 5000);
+    setSending(true);
+    try {
+      await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: "YOUR_WEB3FORMS_ACCESS_KEY",
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      });
+      setSubmitted(true);
+    } catch {
+      alert("Failed to send. Please try again or contact us via WhatsApp.");
+    } finally {
+      setSending(false);
+      setTimeout(() => setSubmitted(false), 6000);
+    }
   };
 
   return (
@@ -224,9 +244,10 @@ export default function ContactPage() {
                     </div>
                     <button
                       type="submit"
-                      className="w-full py-3.5 bg-primary text-white rounded-xl font-semibold hover:bg-primary/90 transition-all shadow-lg shadow-primary/25"
+                      disabled={sending}
+                      className="w-full py-3.5 bg-primary text-white rounded-xl font-semibold hover:bg-primary/90 transition-all shadow-lg shadow-primary/25 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      {t("formSubmit")}
+                      {sending ? "Sending..." : t("formSubmit")}
                     </button>
                   </div>
                 )}

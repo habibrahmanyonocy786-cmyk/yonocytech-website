@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: "YonocyTech — Your Trusted Technology Partner",
     description: t("heroSubtitle"),
-    icons: { icon: "/favicon.ico" },
+    icons: { icon: "/favicon.svg", shortcut: "/favicon.ico" },
     openGraph: {
       title: "YonocyTech — Technology Solutions",
       description: t("heroSubtitle"),
