@@ -13,7 +13,7 @@ name: Deploy YonocyTech Website
 on:
   # Trigger on push to main branch
   push:
-    branches: ["main"]
+    branches: ["master"]
   
   # Allow manual trigger from GitHub Actions tab
   workflow_dispatch:
@@ -37,7 +37,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./yonocytech-website
+        working-directory: .
 
     steps:
       - name: 📥 Checkout repository
@@ -48,7 +48,7 @@ jobs:
         with:
           node-version: "20"
           cache: "npm"
-          cache-dependency-path: ./yonocytech-website/package-lock.json
+          cache-dependency-path: ./package-lock.json
 
       - name: 📦 Install dependencies
         run: npm ci
@@ -66,13 +66,13 @@ jobs:
       - name: 📤 Upload build artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./yonocytech-website/out
+          path: ./out
 
   # ──────────────────────────────────────────────────
   # DEPLOY JOB (only runs after build succeeds)
   # ──────────────────────────────────────────────────
   deploy:
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/master'
     needs: build
     runs-on: ubuntu-latest
     environment:
