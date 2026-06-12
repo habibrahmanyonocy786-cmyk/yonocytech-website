@@ -27,16 +27,16 @@ const servicesData = [
   { key: "customSoftware", icon: "⚙️", color: "from-indigo-500 to-blue-500" },
 ];
 
-const testimonials = [
-  { quote: "YonocyTech transformed our online presence. Their team is professional, innovative, and truly cares about client success.", name: "Ahmad R.", role: "CEO, TechStart" },
-  { quote: "The AI solution they built for us saved 40% on operational costs. Highly recommended!", name: "Fatima K.", role: "Operations Director" },
-  { quote: "From concept to deployment, YonocyTech delivered a flawless mobile app. Great communication throughout.", name: "Mohammad S.", role: "Founder, AppVentures" },
-];
-
 export default function HomePage() {
   const t = useTranslations("home");
   const s = useTranslations("services");
   const [activeTestimonial, setActiveTestimonial] = useState(0);
+
+  const testimonials = [
+    { quote: t("testimonial1"), name: t("testimonial1Name"), role: t("testimonial1Role") },
+    { quote: t("testimonial2"), name: t("testimonial2Name"), role: t("testimonial2Role") },
+    { quote: t("testimonial3"), name: t("testimonial3Name"), role: t("testimonial3Role") },
+  ];
 
   return (
     <div>
@@ -51,7 +51,7 @@ export default function HomePage() {
             <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                Technology Partner
+                {t("heroBadge")}
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-text-dark leading-tight mb-6">
                 {t("heroTitle")}
@@ -101,7 +101,7 @@ export default function HomePage() {
                     <div className="w-24 h-24 mx-auto bg-gradient-to-br from-primary to-secondary rounded-3xl flex items-center justify-center text-white font-bold text-4xl mb-4 animate-float">
                       Y
                     </div>
-                    <p className="text-gray-400 text-sm">Innovate with Us</p>
+                    <p className="text-gray-400 text-sm">{t("heroInnovate")}</p>
                   </div>
                 </div>
               </div>
@@ -136,7 +136,7 @@ export default function HomePage() {
                   href="/services"
                   className="inline-flex items-center gap-1 mt-4 text-primary text-sm font-medium hover:gap-2 transition-all"
                 >
-                  Learn more →
+                  {t("learnMore")}
                 </Link>
               </motion.div>
             ))}
@@ -149,14 +149,14 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { num: "5+", label: "Years Experience" },
-              { num: "50+", label: "Projects Delivered" },
-              { num: "30+", label: "Happy Clients" },
-              { num: "24/7", label: "Support" },
+              { num: "5+", key: "statYears" },
+              { num: "50+", key: "statProjects" },
+              { num: "30+", key: "statClients" },
+              { num: "24/7", key: "statSupport" },
             ].map((stat) => (
-              <motion.div key={stat.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
+              <motion.div key={stat.key} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
                 <div className="text-3xl sm:text-4xl font-bold text-white mb-1">{stat.num}</div>
-                <div className="text-white/80 text-sm">{stat.label}</div>
+                <div className="text-white/80 text-sm">{t(stat.key)}</div>
               </motion.div>
             ))}
           </div>
@@ -168,7 +168,7 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-text-dark mb-4">{t("testimonialTitle")}</h2>
           <div className="relative mt-12 bg-white rounded-2xl shadow-lg p-8 sm:p-12">
-            <div className="text-5xl text-primary/20 mb-4">"</div>
+            <div className="text-5xl text-primary/20 mb-4">&ldquo;</div>
             <motion.p
               key={activeTestimonial}
               initial={{ opacity: 0, y: 10 }}
@@ -219,22 +219,3 @@ export default function HomePage() {
     </div>
   );
 }
-</write_to_file>
-<task_progress>
-- [x] Analyze requirements from YonocyTech_Website_Plan.md
-- [x] Set up Next.js project with TypeScript and TailwindCSS
-- [x] Install dependencies (next-intl, framer-motion, etc.)
-- [x] Set up project structure and internationalization
-- [x] Create design system (colors, fonts, theme)
-- [x] Create layout components (Header, Footer)
-- [ ] Create Home page
-- [ ] Create About Us page
-- [ ] Create Services pages
-- [ ] Create Portfolio page
-- [ ] Create Blog page
-- [ ] Create Contact page
-- [x] Implement RTL support for Persian
-- [x] Add animations and polish
-- [ ] Test and verify the build
-</task_progress>
-</write_to_file>

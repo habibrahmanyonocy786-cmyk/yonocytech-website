@@ -18,7 +18,23 @@
     "servicesSubtitle": "Comprehensive technology solutions tailored to your needs",
     "testimonialTitle": "What Our Clients Say",
     "contactCta": "Call us: 0784258414",
-    "whatsappLink": "Chat on WhatsApp"
+    "whatsappLink": "Chat on WhatsApp",
+    "heroBadge": "Technology Partner",
+    "heroInnovate": "Innovate with Us",
+    "learnMore": "Learn more →",
+    "statYears": "Years Experience",
+    "statProjects": "Projects Delivered",
+    "statClients": "Happy Clients",
+    "statSupport": "Support",
+    "testimonial1": "YonocyTech transformed our online presence. Their team is professional, innovative, and truly cares about client success.",
+    "testimonial1Name": "Ahmad R.",
+    "testimonial1Role": "CEO, TechStart",
+    "testimonial2": "The AI solution they built for us saved 40% on operational costs. Highly recommended!",
+    "testimonial2Name": "Fatima K.",
+    "testimonial2Role": "Operations Director",
+    "testimonial3": "From concept to deployment, YonocyTech delivered a flawless mobile app. Great communication throughout.",
+    "testimonial3Name": "Mohammad S.",
+    "testimonial3Role": "Founder, AppVentures"
   },
   "about": {
     "title": "About Us",
@@ -58,7 +74,24 @@
     "premium": "Premium",
     "contactUs": "Contact us at 0784258414",
     "features": "Key Features",
-    "techStack": "Technology Stack"
+    "techStack": "Technology Stack",
+    "pricingTitle": "Pricing Plans",
+    "pricingPerProject": "/ project",
+    "pricingBasicPages": "Up to 5 pages",
+    "pricingStandardPages": "Up to 15 pages",
+    "pricingPremiumPages": "Unlimited pages",
+    "pricingBasicUI": "Basic UI/UX",
+    "pricingStandardUI": "Advanced UI/UX",
+    "pricingPremiumUI": "Premium UI/UX",
+    "pricingBasicRevisions": "1 Revision",
+    "pricingStandardRevisions": "3 Revisions",
+    "pricingPremiumRevisions": "Unlimited Revisions",
+    "pricingBasicSEO": "Basic SEO",
+    "pricingStandardSEO": "Advanced SEO",
+    "pricingPremiumSEO": "Full SEO Package",
+    "pricingBasicSupport": "1 Month Support",
+    "pricingStandardSupport": "3 Months Support",
+    "pricingPremiumSupport": "12 Months Support"
   },
   "portfolio": {
     "title": "Our Portfolio",
@@ -96,14 +129,23 @@
     "formSubmit": "Send Message",
     "formSuccess": "Thank you! Your message has been sent.",
     "whatsapp": "Chat on WhatsApp",
-    "callNow": "Call Now"
+    "callNow": "Call Now",
+    "contactPhone": "Phone",
+    "contactEmail": "Email",
+    "contactAddress": "Address"
   },
   "footer": {
     "quickLinks": "Quick Links",
+    "services": "Services",
     "contactInfo": "Contact Info",
     "socialMedia": "Social Media",
     "copyright": "© 2026 YonocyTech. All rights reserved.",
-    "description": "Your trusted technology partner for web, mobile, and AI solutions."
+    "description": "Your trusted technology partner for web, mobile, and AI solutions.",
+    "serviceWeb": "Web Development",
+    "serviceMobile": "Mobile Apps",
+    "serviceAI": "AI Solutions",
+    "serviceIT": "IT Consulting",
+    "serviceMarketing": "Digital Marketing"
   },
   "common": {
     "languageSwitch": "فارسی"

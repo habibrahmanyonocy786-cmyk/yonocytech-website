@@ -159,4 +159,3 @@ export default function BlogPage() {
     </div>
   );
 }
-</write_to_file>

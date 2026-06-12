@@ -75,14 +75,14 @@ export default function Footer() {
           {/* Services */}
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4">
-              {t("quickLinks")}
+              {t("services")}
             </h3>
             <ul className="space-y-3">
-              <li><span className="text-gray-300 text-sm">Web Development</span></li>
-              <li><span className="text-gray-300 text-sm">Mobile Apps</span></li>
-              <li><span className="text-gray-300 text-sm">AI Solutions</span></li>
-              <li><span className="text-gray-300 text-sm">IT Consulting</span></li>
-              <li><span className="text-gray-300 text-sm">Digital Marketing</span></li>
+              <li><span className="text-gray-300 text-sm">{t("serviceWeb")}</span></li>
+              <li><span className="text-gray-300 text-sm">{t("serviceMobile")}</span></li>
+              <li><span className="text-gray-300 text-sm">{t("serviceAI")}</span></li>
+              <li><span className="text-gray-300 text-sm">{t("serviceIT")}</span></li>
+              <li><span className="text-gray-300 text-sm">{t("serviceMarketing")}</span></li>
             </ul>
           </div>
 

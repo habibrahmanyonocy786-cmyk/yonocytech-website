@@ -174,4 +174,3 @@ export default function PortfolioPage() {
     </div>
   );
 }
-</write_to_file>

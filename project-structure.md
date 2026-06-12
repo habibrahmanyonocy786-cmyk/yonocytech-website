@@ -19,7 +19,7 @@ yonocytech-website/
 │       └── deploy.yml          # GitHub Actions deployment workflow
 ├── public/                     # Static assets
 ├── src/                        # Source code
-│   ├── middleware.ts           # Next.js middleware
+│   ├── proxy.ts                # Next.js Proxy (i18n routing)
 │   ├── app/                    # App Router
 │   │   ├── favicon.ico         # Site favicon
 │   │   ├── globals.css         # Global styles
@@ -67,7 +67,7 @@ yonocytech-website/
 ### Source Code (`src/`)
 | File | Purpose |
 |------|---------|
-| `middleware.ts` | Internationalization (i18n) routing middleware |
+| `proxy.ts` | Internationalization (i18n) routing proxy (formerly middleware) |
 | `app/globals.css` | Global CSS styles (Tailwind CSS) |
 | `app/layout.tsx` | Root HTML layout wrapper |
 | `app/page.tsx` | Root page (handles redirect to default locale) |

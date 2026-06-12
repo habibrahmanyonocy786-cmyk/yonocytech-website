@@ -18,7 +18,23 @@
     "servicesSubtitle": "راه‌حل‌های جامع فناوری متناسب با نیازهای شما",
     "testimonialTitle": "نظرات مشتریان ما",
     "contactCta": "با ما تماس بگیرید: 0784258414",
-    "whatsappLink": "چت در واتساپ"
+    "whatsappLink": "چت در واتساپ",
+    "heroBadge": "شریک فناوری",
+    "heroInnovate": "با ما نوآوری کنید",
+    "learnMore": "بیشتر بدانید →",
+    "statYears": "سال تجربه",
+    "statProjects": "پروژه تحویل شده",
+    "statClients": "مشتری راضی",
+    "statSupport": "پشتیبانی",
+    "testimonial1": "یونوسی‌تک حضور آنلاین ما را متحول کرد. تیم آنها حرفه‌ای، خلاق و واقعاً به موفقیت مشتری اهمیت می‌دهد.",
+    "testimonial1Name": "احمد ر.",
+    "testimonial1Role": "مدیرعامل، TechStart",
+    "testimonial2": "راه‌حل هوش مصنوعی که برای ما ساختند ۴۰٪ در هزینه‌های عملیاتی صرفه‌جویی کرد. فوق‌العاده توصیه می‌شود!",
+    "testimonial2Name": "فاطمه ک.",
+    "testimonial2Role": "مدیر عملیات",
+    "testimonial3": "از مفهوم تا استقرار، یونوسی‌تک یک اپلیکیشن موبایل بی‌نقص تحویل داد. ارتباط عالی در تمام مراحل.",
+    "testimonial3Name": "محمد ص.",
+    "testimonial3Role": "بنیان‌گذار، AppVentures"
   },
   "about": {
     "title": "درباره ما",
@@ -58,7 +74,24 @@
     "premium": "ویژه",
     "contactUs": "با ما تماس بگیرید 0784258414",
     "features": "ویژگی‌های کلیدی",
-    "techStack": "تکنولوژی‌های استفاده شده"
+    "techStack": "تکنولوژی‌های استفاده شده",
+    "pricingTitle": "قیمت‌گذاری",
+    "pricingPerProject": "/ پروژه",
+    "pricingBasicPages": "تا ۵ صفحه",
+    "pricingStandardPages": "تا ۱۵ صفحه",
+    "pricingPremiumPages": "نامحدود",
+    "pricingBasicUI": "UI/UX پایه",
+    "pricingStandardUI": "UI/UX پیشرفته",
+    "pricingPremiumUI": "UI/UX ویژه",
+    "pricingBasicRevisions": "۱ مرتبه ویرایش",
+    "pricingStandardRevisions": "۳ مرتبه ویرایش",
+    "pricingPremiumRevisions": "ویرایش نامحدود",
+    "pricingBasicSEO": "SEO پایه",
+    "pricingStandardSEO": "SEO پیشرفته",
+    "pricingPremiumSEO": "پکیج کامل SEO",
+    "pricingBasicSupport": "۱ ماه پشتیبانی",
+    "pricingStandardSupport": "۳ ماه پشتیبانی",
+    "pricingPremiumSupport": "۱۲ ماه پشتیبانی"
   },
   "portfolio": {
     "title": "نمونه کارهای ما",
@@ -96,14 +129,23 @@
     "formSubmit": "ارسال پیام",
     "formSuccess": "متشکریم! پیام شما ارسال شد.",
     "whatsapp": "چت در واتساپ",
-    "callNow": "تماس بگیرید"
+    "callNow": "تماس بگیرید",
+    "contactPhone": "تلفن",
+    "contactEmail": "ایمیل",
+    "contactAddress": "آدرس"
   },
   "footer": {
     "quickLinks": "لینک‌های سریع",
+    "services": "خدمات",
     "contactInfo": "اطلاعات تماس",
     "socialMedia": "شبکه‌های اجتماعی",
     "copyright": "© ۲۰۲۶ یونوسی‌تک. تمام حقوق محفوظ است.",
-    "description": "شریک فناوری مورد اعتماد شما برای راه‌حل‌های وب، موبایل و هوش مصنوعی."
+    "description": "شریک فناوری مورد اعتماد شما برای راه‌حل‌های وب، موبایل و هوش مصنوعی.",
+    "serviceWeb": "توسعه وب",
+    "serviceMobile": "اپلیکیشن موبایل",
+    "serviceAI": "راه‌حل‌های هوش مصنوعی",
+    "serviceIT": "مشاوره فناوری اطلاعات",
+    "serviceMarketing": "دیجیتال مارکتینگ"
   },
   "common": {
     "languageSwitch": "English"

@@ -58,7 +58,7 @@ export default function ContactPage() {
                       </svg>
                     </div>
                     <div>
-                      <p className="text-sm text-gray-400 mb-1">{t("phone")}</p>
+                      <p className="text-sm text-gray-400 mb-1">{t("contactPhone")}</p>
                       <a href="tel:+93784258414" className="text-lg font-semibold text-text-dark hover:text-primary transition-colors">
                         0784258414
                       </a>
@@ -75,9 +75,9 @@ export default function ContactPage() {
                       </svg>
                     </div>
                     <div>
-                      <p className="text-sm text-gray-400 mb-1">{t("email")}</p>
+                      <p className="text-sm text-gray-400 mb-1">{t("contactEmail")}</p>
                       <a href="mailto:info@yonocytech.com" className="text-lg font-semibold text-text-dark hover:text-primary transition-colors">
-                        info@yonocytech.com
+                        {t("email")}
                       </a>
                     </div>
                   </div>
@@ -115,7 +115,7 @@ export default function ContactPage() {
                       </svg>
                     </div>
                     <div>
-                      <p className="text-sm text-gray-400 mb-1">Address</p>
+                      <p className="text-sm text-gray-400 mb-1">{t("contactAddress")}</p>
                       <p className="text-lg font-semibold text-text-dark">{t("address")}</p>
                     </div>
                   </div>
@@ -253,4 +253,3 @@ export default function ContactPage() {
     </div>
   );
 }
-</write_to_file>

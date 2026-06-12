@@ -78,7 +78,7 @@ export default function ServicesPage() {
       {/* Service Cards */}
       <section className="py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
-          {servicesData.map((service, idx) => (
+          {servicesData.map((service) => (
             <motion.div
               key={service.key}
               {...fadeInUp}
@@ -134,48 +134,46 @@ export default function ServicesPage() {
       {/* Pricing */}
       <motion.section {...fadeInUp} className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-text-dark text-center mb-12">Pricing Plans</h2>
+          <h2 className="text-3xl font-bold text-text-dark text-center mb-12">{t("pricingTitle")}</h2>
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {pricingPlans.map((plan, idx) => (
-              <div
-                key={plan}
-                className={`rounded-2xl p-8 border ${
-                  idx === 1 ? "bg-primary text-white border-primary scale-105 shadow-xl" : "bg-white border-gray-200"
-                }`}
-              >
-                <h3 className={`text-lg font-semibold mb-2 ${idx === 1 ? "text-white" : "text-text-dark"}`}>{t(plan)}</h3>
-                <div className={`text-3xl font-bold mb-4 ${idx === 1 ? "text-white" : "text-text-dark"}`}>
-                  ${idx === 0 ? "999" : idx === 1 ? "2,499" : "4,999"}
-                  <span className={`text-sm font-normal ${idx === 1 ? "text-white/70" : "text-gray-400"}`}> / project</span>
-                </div>
-                <ul className={`space-y-3 mb-8 ${idx === 1 ? "text-white/80" : "text-gray-600"}`}>
-                  {[
-                    idx === 0 ? "Up to 5 pages" : idx === 1 ? "Up to 15 pages" : "Unlimited pages",
-                    idx === 0 ? "Basic UI/UX" : idx === 1 ? "Advanced UI/UX" : "Premium UI/UX",
-                    idx === 0 ? "1 Revision" : idx === 1 ? "3 Revisions" : "Unlimited Revisions",
-                    idx === 0 ? "Basic SEO" : idx === 1 ? "Advanced SEO" : "Full SEO Package",
-                    idx === 0 ? "1 Month Support" : idx === 1 ? "3 Months Support" : "12 Months Support",
-                  ].map((feature) => (
-                    <li key={feature} className="flex items-center gap-3 text-sm">
-                      <svg className={`w-4 h-4 flex-shrink-0 ${idx === 1 ? "text-white" : "text-secondary"}`} fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  href="/contact"
-                  className={`block text-center w-full py-3 rounded-xl font-semibold transition-all ${
-                    idx === 1
-                      ? "bg-white text-primary hover:bg-gray-100"
-                      : "bg-primary text-white hover:bg-primary/90"
+            {pricingPlans.map((plan, idx) => {
+              const prefix = `pricing${plan.charAt(0).toUpperCase() + plan.slice(1)}`;
+              const features = ["Pages", "UI", "Revisions", "SEO", "Support"].map((f) => t(`${prefix}${f}`));
+              return (
+                <div
+                  key={plan}
+                  className={`rounded-2xl p-8 border ${
+                    idx === 1 ? "bg-primary text-white border-primary scale-105 shadow-xl" : "bg-white border-gray-200"
                   }`}
                 >
-                  {t("contactUs")}
-                </Link>
-              </div>
-            ))}
+                  <h3 className={`text-lg font-semibold mb-2 ${idx === 1 ? "text-white" : "text-text-dark"}`}>{t(plan)}</h3>
+                  <div className={`text-3xl font-bold mb-4 ${idx === 1 ? "text-white" : "text-text-dark"}`}>
+                    ${idx === 0 ? "999" : idx === 1 ? "2,499" : "4,999"}
+                    <span className={`text-sm font-normal ${idx === 1 ? "text-white/70" : "text-gray-400"}`}>{t("pricingPerProject")}</span>
+                  </div>
+                  <ul className={`space-y-3 mb-8 ${idx === 1 ? "text-white/80" : "text-gray-600"}`}>
+                    {features.map((feature) => (
+                      <li key={feature} className="flex items-center gap-3 text-sm">
+                        <svg className={`w-4 h-4 flex-shrink-0 ${idx === 1 ? "text-white" : "text-secondary"}`} fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <Link
+                    href="/contact"
+                    className={`block text-center w-full py-3 rounded-xl font-semibold transition-all ${
+                      idx === 1
+                        ? "bg-white text-primary hover:bg-gray-100"
+                        : "bg-primary text-white hover:bg-primary/90"
+                    }`}
+                  >
+                    {t("contactUs")}
+                  </Link>
+                </div>
+              );
+            })}
           </div>
         </div>
       </motion.section>
@@ -195,4 +193,3 @@ export default function ServicesPage() {
     </div>
   );
 }
-</write_to_file>

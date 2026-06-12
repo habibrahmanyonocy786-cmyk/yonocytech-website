@@ -90,4 +90,3 @@ export default function AboutPage() {
     </div>
   );
 }
-</write_to_file>
